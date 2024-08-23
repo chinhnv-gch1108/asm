@@ -1,0 +1,121 @@
+/* Container tổng */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Tiêu đề */
+h1.alert {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 1px; /* Giảm khoảng cách chữ cho tiêu đề */
+    background-color: #2fff00; /* Nền đỏ nhạt cho cảnh báo */
+    border-radius: 0.5rem; /* Góc bo tròn rõ ràng hơn */
+    padding: 1rem 1.5rem; /* Thêm khoảng cách hai bên */
+    text-align: center; /* Căn giữa tiêu đề */
+    margin-bottom: 1.5rem; /* Khoảng cách dưới tiêu đề */
+}
+
+/* Card sản phẩm */
+.card {
+    border: none; /* Xóa border mặc định */
+    border-radius: 0.5rem; /* Góc bo tròn phù hợp với Bootstrap */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bóng nhẹ */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng chuyển động */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Di chuyển lên trên khi hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Bóng đổ nổi bật hơn */
+}
+
+/* Tiêu đề sản phẩm */
+.card-title {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem; /* Khoảng cách dưới tiêu đề */
+    font-weight: 700;
+    color: #007bff; /* Màu chính của Bootstrap */
+    text-align: center; /* Căn giữa tiêu đề sản phẩm */
+}
+
+/* Giá sản phẩm */
+.card-body p {
+    font-size: 1.2rem;
+    color: #6c757d; /* Màu chữ nhạt của Bootstrap */
+    margin-bottom: 1rem; /* Khoảng cách dưới đoạn văn */
+    text-align: center; /* Căn giữa giá sản phẩm */
+}
+
+/* Nút "Add to cart" */
+.btn-custom {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 0.75rem 1.5rem; /* Padding cân đối hơn */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: block; /* Hiển thị nút trên một dòng */
+    width: 100%; /* Đảm bảo nút chiếm toàn bộ chiều rộng của card */
+    text-align: center; /* Căn giữa chữ trên nút */
+}
+
+.btn-custom:hover {
+    background-color: #218838;
+    transform: scale(1.05); /* Phóng to nút khi hover */
+}
+
+/* Hình ảnh sản phẩm */
+.card-img-top {
+    border-radius: 0.8rem; /* Góc bo tròn để đồng nhất với card */
+    object-fit: cover;
+    height: 200px; /* Chiều cao cố định cho hình ảnh */
+    transition: transform 0.3s ease-in-out;
+    width: 100%; /* Đảm bảo hình ảnh chiếm toàn bộ chiều rộng */
+}
+
+.card-img-top:hover {
+    transform: scale(1.08); /* Phóng to hình ảnh khi hover */
+}
+
+/* Khoảng cách giữa các sản phẩm */
+.col-md-3 {
+    margin-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Thêm khoảng cách giữa các cột */
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.contact-info-wrapper {
+    background-color: black;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .contact-info-wrapper a {
+    color: white;
+  }
+  
+  .contact-info-wrapper h2,
+  .contact-info-wrapper h4 {
+    color: white;
+  }
+
+@media (max-width: 767.98px) {
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .col-md-3 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

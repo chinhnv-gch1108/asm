@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+   <style>
+      /* Table Header and Title */
+      .table-primary th {
+         background-color: #007bff;
+         /* Blue background for header */
+         color: #ffffff;
+         /* White text color */
+         font-weight: bold;
+         /* Bold font for header text */
+      }
+
+      .table-primary thead tr:first-child th {
+         background-color: #007bff;
+         /* Blue background for the first row of header */
+         color: #ffffff;
+         /* White text color */
+      }
+
+      .table-primary .btn-primary {
+         background-color: #f500c4;
+         /* Custom yellow color for warning button */
+         border-color: #f500c4;
+         /* Border color matching button background */
+      }
+
+      /* Table Body */
+      .table-primary tbody tr:nth-child(even) {
+         background-color: #e9ecef;
+         /* Light gray background for even rows */
+      }
+
+      .table-primary tbody tr:nth-child(odd) {
+         background-color: #ffffff;
+         /* White background for odd rows */
+      }
+
+      /* Table Cells */
+      .table-primary td {
+         vertical-align: middle;
+         /* Center align content vertically */
+      }
+
+      /* Buttons */
+      .table-primary .btn {
+         margin: 2px;
+         /* Add some space around buttons */
+      }
+
+      .table-primary .btn-info {
+         background-color: #58e3f8;
+         /* Custom blue color for info button */
+         border-color: #58e3f8;
+         /* Border color matching button background */
+      }
+
+      .table-primary .btn-warning {
+         background-color: #ffc107;
+         /* Custom yellow color for warning button */
+         border-color: #ffc107;
+         /* Border color matching button background */
+      }
+
+      .table-primary .btn-danger {
+         background-color: #dc3545;
+         /* Custom red color for danger button */
+         border-color: #dc3545;
+         /* Border color matching button background */
+      }
+   </style>
+</head>
+
+<body>
+   <table class="table table-primary text-center">
+      <thead>
+         <tr>
+            <th colspan="4" class="h1 text-danger">SPORTS LIST</th>
+            <th>
+               <a href="/sport/add" class="btn btn-primary">Add</a>
+            </th>
+         </tr>
+         <tr>
+            <th colspan="3">
+               <form action="/sport/search" method="post">
+                  <input class="form-control" type="search" name="name" placeholder="Search by name" required>
+               </form>
+            </th>
+            <th colspan="2">
+               <a href="/sport/sort/asc" class="btn btn-secondary">Price ASC</a>
+               <a href="/sport/sort/desc" class="btn btn-success">Price DESC</a>
+            </th>
+         </tr>
+         <tr>
+            <th>Sport Category</th>
+            <th>Sport Quantity</th>
+            <th>Sport Price</th>
+            <th>Sprot Image</th>
+            <th>Menu</th>
+         </tr>
+      </thead>
+      <tbody>
+         {{#each sports }}
+         <tr>
+            <td>{{ category }}</td>
+            <td>{{ quantity }}</td>
+            <td>${{ price }}</td>
+            <td>
+               <a href="/product/detail/{{ _id }}">
+                  <img src="{{ image }}" alt="product image" width="100" height="120">
+               </a>
+            </td>
+            <td>
+               <a class="btn btn-info" href="/product/detail/{{ _id }}">Detail</a>
+               <a class="btn btn-warning" href="/product/edit/{{ _id }}">Edit</a>
+               <a class="btn btn-danger" href="/product/delete/{{ _id }}"
+                  onclick="return confirm('Are you sure to delete this product?')">Delete</a>
+            </td>
+         </tr>
+         {{/each}}
+      </tbody>
+   </table>
+</body>
+
+</html>

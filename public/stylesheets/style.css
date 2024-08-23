@@ -1,0 +1,155 @@
+.header {
+  background-color: #f8ff90 !important;
+  border-bottom: 2px solid black;
+}
+
+.app-breadcrumb {
+  margin-top: 50px;
+}
+
+.logout-wrapper {
+  margin-left: 50px;
+}
+
+.app-banner {
+  width: 100%;
+}
+
+.footer {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+
+.container {
+  width: 80%;
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .card-img-top {
+  opacity: 0.8;
+}
+
+.card-body {
+  transition: background-color 0.3s ease;
+}
+
+.card:hover .card-body {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #333;
+}
+
+.card-text.card-textt {
+  font-weight: bold;
+}
+
+@media (max-width: 767.98px) {
+  .card {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+.product-list-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.col-3 {
+  margin: 10px;
+  padding: 0 10px;
+  width: 16.6667%;
+}
+
+.register-link p a:hover {
+  text-decoration: underline;
+}
+
+.contact-info-wrapper {
+  background-color: black;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.contact-info-wrapper a {
+  color: white;
+}
+
+.contact-info-wrapper h2,
+.contact-info-wrapper h4 {
+  color: white;
+}
+
+.header a {
+  color: white !important;
+}
+
+.header button {
+  color: black;
+}
+
+.navbar {
+  background-color: blue;
+}
+
+h2 {
+  text-align: center;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.hot-sale-section {
+  text-align: center;
+  width: 100%;
+  background-color: white;
+  padding: 20px 0;
+}
+
+.hot-sale-section h2 {
+  margin-bottom: 20px;
+}
+
+.hot-sale-products {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.hot-sale-products .card {
+  width: 18rem;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 767.98px) {
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .col-md-3 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

@@ -1,0 +1,75 @@
+[{
+  "_id": {
+    "$oid": "66c56dd38227db6ada44b6cb"
+  },
+  "brand": "Toyota",
+  "model": "Corolla",
+  "year": 2021,
+  "color": "White",
+  "engine": "Hybrid",
+  "owner": "John Doe",
+  "image": "https://www.toyota.com.vn/media/hdxbzeb2/bang-gia-xe-toyota-2.jpeg?width=777&height=649&mode=max",
+  "registration": {
+    "$oid": "64c8b0b4e123456789abcdef"
+  }
+},
+{
+  "_id": {
+    "$oid": "66c56dd38227db6ada44b6cc"
+  },
+  "brand": "Honda",
+  "model": "Civic",
+  "year": 2022,
+  "color": "Black",
+  "engine": "Petrol",
+  "owner": "Jane Smith",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ_SE_WzzjIUL0aq5thOlRjXSASESo1XcsTg&s",
+  "registration": {
+    "$oid": "64c8b0b4e123456789abcdee"
+  }
+},
+{
+  "_id": {
+    "$oid": "66c56dd38227db6ada44b6cd"
+  },
+  "brand": "Tesla",
+  "model": "Model 3",
+  "year": 2023,
+  "color": "Red",
+  "engine": "Electric",
+  "owner": "Alice Johnson",
+  "image": "https://cdn.motor1.com/images/mgl/Mk3qg6/s3/2017-tesla-roadster-deck-model-petersen-automotive-museum.jpg",
+  "registration": {
+    "$oid": "64c8b0b4e123456789abcded"
+  }
+},
+{
+  "_id": {
+    "$oid": "66c56dd38227db6ada44b6ce"
+  },
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 2020,
+  "color": "Blue",
+  "engine": "V8",
+  "owner": "Bob Williams",
+  "image": "https://hips.hearstapps.com/hmg-prod/images/2025-ford-explorer-st-110-65ba6d640cbb3.jpg",
+  "registration": {
+    "$oid": "64c8b0b4e123456789abcdfe"
+  }
+},
+{
+  "_id": {
+    "$oid": "66c56dd38227db6ada44b6cf"
+  },
+  "brand": "Chevrolet",
+  "model": "Camaro",
+  "year": 2019,
+  "color": "Yellow",
+  "engine": "V7",
+  "owner": "Charlie Brown",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM9FHCafsJrfPcAiqQRDThINzjS5VK0hlWQA&s",
+  "registration": {
+    "$oid": "64c8b0b4e123456789abcdfd"
+  }
+}]

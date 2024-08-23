@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Product Detail</title>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <style>
+      body {
+         background-color: #92ffef;
+      }
+
+      .container {
+         margin-top: 50px;
+      }
+
+      .product-image {
+         border: 2px solid #dee2e6;
+         border-radius: 8px;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+         overflow: hidden;
+         max-width: 100%;
+         height: auto;
+      }
+
+      .product-details {
+         padding-left: 20px;
+      }
+
+      .product-details h1 {
+         color: #dc3545;
+         margin-bottom: 20px;
+      }
+
+      .product-details h3 {
+         color: #343a40;
+         margin-bottom: 15px;
+      }
+
+      .product-details h3 span {
+         font-weight: bold;
+      }
+   </style>
+</head>
+
+<body>
+   <div class="container">
+      <div class="row">
+         <div class="col-md-6">
+            <img class="product-image" src="{{ products.image }}" alt="Product Image">
+         </div>
+         <div class="col-md-6 product-details">
+            <h1>Product Detail</h1>
+            <h3><span>Name:</span> {{ products.name }}</h3>
+            <h3><span>Devil Fruit:</span> {{ products.devil_fruit }}</h3>
+            <h3><span>Role:</span> {{ products.role }}</h3>
+            <h3><span>Bounty:</span> ${{ products.bounty }}</h3>   
+         </div>
+      </div>
+   </div>
+</body>
+
+</html>

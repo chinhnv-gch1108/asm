@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Edit Product</title>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <style>
+       /* Custom CSS Styles */
+       body {
+           background-color: #f8f9fa; /* Light gray background for the whole page */
+       }
+
+       .container {
+           margin-top: 50px; /* Add top margin to move the form down */
+       }
+
+       .card {
+           border-radius: 10px; /* Rounded corners for the card */
+           box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Shadow effect for the card */
+           padding: 20px; /* Padding inside the card */
+       }
+
+       .alert-warning {
+           background-color: #ffc107; /* Background color for the alert */
+           color: #212529; /* Darker text color for readability */
+           border: 1px solid #ffc107; /* Matching border color */
+           border-radius: 5px; /* Rounded corners for the alert */
+           padding: 15px; /* Padding inside the alert */
+       }
+
+       .form-group label {
+           font-size: 1.1rem; /* Slightly larger font size for labels */
+           color: #dc3545; /* Danger color for labels */
+       }
+
+       .form-control {
+           border-radius: 5px; /* Rounded corners for input fields */
+           box-shadow: inset 0 1px 2px rgba(0,0,0,0.1); /* Inner shadow effect */
+           padding: 10px; /* Increase padding inside input fields */
+       }
+
+       .btn-success {
+           width: 100%; /* Make the button full-width */
+           border-radius: 5px; /* Rounded corners for the button */
+           padding: 10px; /* Increase button padding for better click area */
+           font-size: 1.1rem; /* Larger font size for better readability */
+           font-weight: bold; /* Bold font weight for the button text */
+       }
+
+       .btn-success:hover {
+           background-color: #218838; /* Darker green on hover */
+           border-color: #1e7e34; /* Darker green border on hover */
+       }
+
+       .form-group img {
+           border: 1px solid #ddd; /* Border around the image */
+           border-radius: 5px; /* Rounded corners for the image */
+           margin-bottom: 10px; /* Margin below the image */
+       }
+   </style>
+</head>
+
+<body>
+   <div class="container text-center card bg-light col-md-6">
+      <form action="/product/edit/{{ products._id }}" method="post">
+         <h1 class="alert alert-warning text-uppercase">Edit Product</h1>
+         <div class="form-group mt-3">
+            <label class="text text-danger fw-bold">Product Name</label>
+            <input class="form-control" type="text" placeholder="Enter product name" name="name" required minlength="5" value="{{ products.name }}">
+         </div>
+         <div class="form-group mt-3">
+            <label class="text text-danger fw-bold">Product Role</label>
+            <input class="form-control" type="text" name="role" placeholder="Enter product role" value="{{ products.role }}">
+         </div>
+         <div class="form-group mt-3">
+            <label class="text text-danger fw-bold">Product Bounty</label>
+            <input class="form-control" type="number" name="bounty" placeholder="Enter product bounty" value="{{ products.bounty }}">
+         </div>
+         <div class="form-group mt-3">
+            <label class="text text-danger fw-bold">Product Image</label><br>
+            <img src="{{ products.image }}" width="100" height="120"><br>
+            <input class="form-control" type="url" name="image" placeholder="Enter product image URL" required value="{{ products.image }}">
+         </div>
+         <div class="form-group mt-3 mb-3">
+            <input class="btn btn-success" type="submit" value="Edit">
+         </div>
+      </form>
+   </div>
+
+</body>
+
+</html>
